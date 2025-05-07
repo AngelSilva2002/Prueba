@@ -1,0 +1,15 @@
+===============================
+  REPORTE DE ARCHIVOS DE TEXTO
+  Fecha: 2025-05-06 19:30:39
+===============================
+
+Nombre del archivo                 Líneas
+------------------------------------------
+a.txt                                   2
+AASDASDASDASDASDSA.txt                  0
+archivo1.txt                            3
+ASDASDA DASDASD 1231232.txt             1
+Nuevo archivo.txt                       4
+
+------------------------------------------
+Total de archivos procesados:           5

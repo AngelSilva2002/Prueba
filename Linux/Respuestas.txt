@@ -1,0 +1,41 @@
+1. procesos que más memoria consumen:
+
+ps aux --sort=-%mem | head -n 6
+
+
+2. Agregar un nuevo usuario al sistema:
+
+sudo adduser nuevo_usuario
+
+3. Cambiar los permisos de un archivo para que solo el dueño pueda leer y escribir:
+
+chmod 600 archivo.txt
+
+4. Ver el estado del servicio ssh 
+
+systemctl status ssh
+
+-------------------------------------------------------------------------------------
+
+Script para crear respaldo comprimido
+
+#!/bin/bash
+
+# Variables
+FECHA=$(date +%Y-%m-%d)
+DIRECTORIO_ORIGEN="/home/usuario1"
+DIRECTORIO_DESTINO="/backups"
+ARCHIVO_BACKUP="${DIRECTORIO_DESTINO}/usuario1_backup_${FECHA}.tar.gz"
+
+# Verificar si el directorio de destino existe
+
+if [ ! -d "$DIRECTORIO_DESTINO" ]; then
+    echo "El directorio $DIRECTORIO_DESTINO no existe. Creándolo..."
+    mkdir -p "$DIRECTORIO_DESTINO"
+fi
+
+# Crear el respaldo
+tar -czvf "$ARCHIVO_BACKUP" "$DIRECTORIO_ORIGEN"
+
+# Mensaje de confirmación
+echo "Respaldo creado: $ARCHIVO_BACKUP"
